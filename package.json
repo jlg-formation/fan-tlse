@@ -14,7 +14,9 @@
   "author": "Jean-Louis GUENEGO",
   "license": "ISC",
   "dependencies": {
-    "angular": "1.6.4"
+    "angular": "1.6.4",
+    "font-awesome": "4.5.0",
+    "jquery": "2.1.4"
   },
   "devDependencies": {
     "express": "4.15.2",
