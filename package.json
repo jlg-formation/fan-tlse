@@ -1,0 +1,16 @@
+{
+  "name": "exo",
+  "version": "0.0.1",
+  "description": "formation orsys de Toulouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "orsys",
+    "formation"
+  ],
+  "author": "Jean-Louis GUENEGO",
+  "license": "ISC"
+}
