@@ -7,26 +7,32 @@ Licence: Free to use under our free template licence terms
 Licence URI: http://www.os-templates.com/template-terms
 -->
 <html ng-app="main">
+
 <head>
-<title>Lacegant</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-<link rel="stylesheet" href="../node_modules/angular/angular-csp.css" />
+    <base href="/app/">
+	<title>Lacegant</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+	<link rel="stylesheet" href="../node_modules/angular/angular-csp.css" />
 </head>
+
 <body ng-cloak id="top">
-<ors-header></ors-header>
-<ors-body></ors-body>
-<ors-footer></ors-footer>
-<!-- JAVASCRIPTS -->
-<script src="../node_modules/jquery/dist/jquery.js"></script>
-<script src="layout/scripts/jquery.backtotop.js"></script>
-<script src="layout/scripts/jquery.mobilemenu.js"></script>
-<!-- IE9 Placeholder Support -->
-<script src="layout/scripts/jquery.placeholder.min.js"></script>
-<!-- / IE9 Placeholder Support -->
-<script src="../node_modules/angular/angular.js"></script>
-<script src="main.js"></script>
-<script src="clone.js"></script>
+	<ors-header></ors-header>
+	<ors-body></ors-body>
+	<ors-footer></ors-footer>
+	<!-- JAVASCRIPTS -->
+	<script src="../node_modules/jquery/dist/jquery.js"></script>
+	<script src="layout/scripts/jquery.backtotop.js"></script>
+	<script src="layout/scripts/jquery.mobilemenu.js"></script>
+	<!-- IE9 Placeholder Support -->
+	<script src="layout/scripts/jquery.placeholder.min.js"></script>
+	<!-- / IE9 Placeholder Support -->
+	<script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="main.js"></script>
+	<script src="clone.js"></script>
+    <script src="ors-route/ors-route.js"></script>
 </body>
+
 </html>
