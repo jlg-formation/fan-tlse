@@ -7,9 +7,9 @@
 		return {
 			restrict: 'E',
 			scope: {
-				note: '='
+				note: '=?' 
 			},
-			controller: function($scope, $element, $attrs) {
+			controller: function($scope, $element, $attrs, $compile) {
 				'ngInject';
 				console.log('orsStar template', arguments);
 				$scope.$watch('note', function() {
@@ -18,14 +18,19 @@
 					note = (note > 5) ? 5 : note;
 					note = (note < 0) ? 0 : note;
 					var html = '';
-					for (var i = 0; i < note; i++) {
-						html += '<img src="./ors-star/img/yellow_star.png"/>';
+					for (let i = 0; i < note; i++) {
+						html += '<img ng-click="update(' + (i + 1) + ')" src="./ors-star/img/yellow_star.png"/>';
 					}
-					for (var i = note; i < 5; i++) {
-						html += '<img src="./ors-star/img/white_star.png"/>';
+					for (let i = note; i < 5; i++) {
+						html += '<img ng-click="update(' + (i + 1) + ')" src="./ors-star/img/white_star.png"/>';
 					}
 					$element.html(html);
+					$compile($element.contents())($scope);
 				});
+				$scope.update = function(n) {
+					console.log('update', arguments);	
+					$scope.note = n;
+				};
 			}
 		};
 	});
