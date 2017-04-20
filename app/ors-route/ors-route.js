@@ -45,12 +45,13 @@
 		$locationProvider.html5Mode(true);
 	});
 
-	app.controller('ServicesCtrl', function ServicesCtrl($http, $q) {
+	app.controller('ServicesCtrl', function ServicesCtrl($http, $q, $rootScope) {
 		'ngInject';
 		console.log('ServicesCtrl', arguments);
 		var ctrl = this;
 		ctrl.start = function() {
 			console.log('start', arguments);
+			$rootScope.showSpinner = true;
 			$http.get('../ws/s1').then(function(response) {
 				console.log('response 1', response);
 				return $q.all([
@@ -66,6 +67,8 @@
 				return $http.get('../ws/s6');
 			}).then(function(response) {
 				console.log('response 6', response);
+			}).finally(function() {
+				$rootScope.showSpinner = false;
 			}).catch(function(error) {
 				console.error('error', error);
 			});
