@@ -19,7 +19,9 @@
 		var sevicesState = {
 			name: 'services',
 			url: '/services',
-			templateUrl: './ors-route/tmpl/services.html'
+			templateUrl: './ors-route/tmpl/services.html',
+			controller: 'ServicesCtrl',
+			controllerAs: '$ctrl'
 		};
 		var clientsState = {
 			name: 'clients',
@@ -37,10 +39,17 @@
 		$stateProvider.state(produitsState);
 		$stateProvider.state(sevicesState);
 		$stateProvider.state(clientsState);
-        $stateProvider.state(contactState);
+		$stateProvider.state(contactState);
 
-        $urlRouterProvider.otherwise('/');
-        $locationProvider.html5Mode(true);
+		$urlRouterProvider.otherwise('/');
+		$locationProvider.html5Mode(true);
 	});
 
+	app.controller('ServicesCtrl', function ServicesCtrl() {
+		console.log('ServicesCtrl', arguments);
+		var ctrl = this;
+		ctrl.start = function() {
+			console.log('start', arguments);
+		};
+	});
 })();
