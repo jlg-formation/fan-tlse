@@ -63,14 +63,14 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(10);
+__webpack_require__(11);
 module.exports = angular;
 
 
@@ -14610,6 +14610,12 @@ angular.module('ui.router.state')
 /* 4 */
 /***/ (function(module, exports) {
 
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
 /*
 Template Name: Lacegant
 Author: <a href="http://www.os-templates.com/">OS Templates</a>
@@ -14633,7 +14639,7 @@ jQuery(window).scroll(function () {
 });
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 /*
@@ -14666,7 +14672,7 @@ $('<form action="#"><select /></form>').appendTo("#mainav");$("<option />", { se
 });
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* HTML5 Placeholder jQuery Plugin - v2.1.1
@@ -14745,7 +14751,7 @@ jQuery(document).ready(function ($) {
 });
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports) {
 
 (function () {
@@ -14824,7 +14830,7 @@ jQuery(document).ready(function ($) {
 })();
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 (function () {
@@ -14867,7 +14873,7 @@ jQuery(document).ready(function ($) {
 })();
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -15254,7 +15260,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 /**
@@ -48631,28 +48637,33 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+__webpack_require__(4);
 var jQuery = __webpack_require__(1);
 window.$ = jQuery;
 window.jQuery = jQuery;
 
-__webpack_require__(4);
 __webpack_require__(5);
 __webpack_require__(6);
+__webpack_require__(7);
 
 __webpack_require__(0);
 __webpack_require__(3);
-__webpack_require__(7);
 __webpack_require__(8);
 __webpack_require__(9);
+__webpack_require__(10);
 __webpack_require__(2);
 
 var app = angular.module('main', ['ors-route', 'ors-star', 'angularSpinner']);
+
+app.run(function () {
+	console.log('kiki');
+});
 
 app.directive('orsHeader', function () {
 	return {

@@ -1,4 +1,7 @@
 'use strict';
+
+require('./layout/styles/layout.css');
+require('angular/angular-csp.css');
 var jQuery = require('jquery');
 window.$ = jQuery;
 window.jQuery = jQuery;
