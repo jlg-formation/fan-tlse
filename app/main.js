@@ -16,6 +16,10 @@ require('angular-spinner/dist/angular-spinner.js');
 
 var app = angular.module('main', ['ors-route', 'ors-star', 'angularSpinner']);
 
+app.run(function() {
+	console.log('kiki');
+});
+
 app.directive('orsHeader', function() {
 	return {
 		restrict: 'E',

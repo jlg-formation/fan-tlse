@@ -4,7 +4,17 @@ var express = require('express'); // charge ExpressJS
 var serveIndex = require('serve-index');
 var ws = require('./web-services.js');
 
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+
 var app = express();
+
+webpackConfig.output.path = '/';
+const compiler = webpack(webpackConfig);
+app.use('/app/wpk/', webpackDevMiddleware(compiler, {}));
+
+
 app.use('/ws', ws);
 
 app.use(express.static('.'));
