@@ -15,6 +15,8 @@
 				$scope.$watch('note', function() {
 					console.log('watch', arguments);
 					var note = $scope.note || 3;
+					note = (note > 5) ? 5 : note;
+					note = (note < 0) ? 0 : note;
 					var html = '';
 					for (var i = 0; i < note; i++) {
 						html += '<img src="./ors-star/img/yellow_star.png"/>';
