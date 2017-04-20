@@ -45,11 +45,17 @@
 		$locationProvider.html5Mode(true);
 	});
 
-	app.controller('ServicesCtrl', function ServicesCtrl() {
+	app.controller('ServicesCtrl', function ServicesCtrl($http) {
+		'ngInject';
 		console.log('ServicesCtrl', arguments);
 		var ctrl = this;
 		ctrl.start = function() {
 			console.log('start', arguments);
+			$http.get('../ws/s1').then(function(response) {
+				console.log('response', response);
+			}).catch(function(error) {
+				console.error('error', error);
+			});
 		};
 	});
 })();
