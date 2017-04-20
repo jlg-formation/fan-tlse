@@ -6,7 +6,9 @@
 	app.directive('orsStar', function() {
 		return {
 			restrict: 'E',
-			template: '<img src="./ors-star/img/yellow_star.png"/>'
+			template: function() {
+				return '<img src="./ors-star/img/yellow_star.png"/>';
+			}
 		};
 	});
 })();
