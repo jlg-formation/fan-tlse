@@ -40,7 +40,7 @@
 		$stateProvider.state(sevicesState);
 		$stateProvider.state(clientsState);
 		$stateProvider.state(contactState);
-
+		
 		$urlRouterProvider.otherwise('/');
 		$locationProvider.html5Mode(true);
 	});
